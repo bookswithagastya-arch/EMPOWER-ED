@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How We Learn — EmpowerED</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .page-hero { background: var(--teal); padding: 4rem 2rem 3rem; }
+  .breadcrumb { font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-bottom: 1rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.85); text-decoration: none; }
+  .page-hero h1 { font-family: var(--font-display); font-size: 2.5rem; color: #fff; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+  .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 560px; line-height: 1.7; }
+
+  .games-section { background: var(--cream); }
+  .games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .game-card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.75rem; }
+  .game-icon { width: 52px; height: 52px; border-radius: 0.75rem; background: var(--teal-light); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem; }
+  .game-card h3 { font-size: 1.05rem; font-weight: 600; color: var(--brown); margin-bottom: 0.4rem; }
+  .game-card .game-tag { font-size: 0.75rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
+  .game-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem; }
+  .game-card .how { font-size: 0.85rem; color: var(--brown-mid); background: var(--brown-light); border-radius: 0.5rem; padding: 0.75rem 1rem; line-height: 1.6; }
+  .game-card .how strong { color: var(--brown); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Empower<span>ED</span></a>
+  <ul class="nav-links">
+    <li><a href="curriculum.html">Curriculum</a></li>
+    <li><a href="games.html" class="active">How we learn</a></li>
+    <li><a href="materials.html">Free materials</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> → How we learn</div>
+    <h1>Every lesson has a game at its core</h1>
+    <p>Because curiosity, not repetition, is what builds lasting language. Each game is designed around contexts rural Karnataka students already know and love.</p>
+  </div>
+</section>
+
+<section class="games-section">
+  <div class="container">
+    <div class="games-grid">
+
+      <div class="game-card">
+        <div class="game-icon">🏏</div>
+        <div class="game-tag">Reading · All levels</div>
+        <h3>Word family cricket</h3>
+        <p>Uses the sport every Karnataka kid already knows to make word families competitive and fun.</p>
+        <div class="how"><strong>How to play:</strong> Teacher bowls by calling a word family. Students bat by naming a valid word from that family. Three misses and you're out. Class keeps score.</div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-icon">🛒</div>
+        <div class="game-tag">Reading · Grade 1–3</div>
+        <h3>Market game</h3>
+        <p>Uses the market context students know from daily life — buying, selling, haggling — to make word recognition feel real.</p>
+        <div class="how"><strong>How to play:</strong> Set up pretend market stalls, each with a word label. Students "buy" items by reading the label correctly. Wrong reading means no purchase.</div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-icon">📖</div>
+        <div class="game-tag">Comprehension · Grade 2–5</div>
+        <h3>Story relay</h3>
+        <p>Forces students to read what came before them and build on it — comprehension and creativity in one activity.</p>
+        <div class="how"><strong>How to play:</strong> Student 1 writes one sentence. Student 2 reads it and adds the next. Continue around the class. The story must make sense.</div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-icon">🎯</div>
+        <div class="game-tag">Comprehension · All levels</div>
+        <h3>True or false race</h3>
+        <p>Physical movement breaks sitting monotony and makes comprehension checks into a whole-body activity.</p>
+        <div class="how"><strong>How to play:</strong> Teacher reads a sentence. Students run to one side for true, the other for false. Fast and loud — keeps energy high.</div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-icon">🎡</div>
+        <div class="game-tag">Vocabulary · Grade 1–4</div>
+        <h3>Spin the word</h3>
+        <p>Competitive rotation keeps every student alert — nobody knows who the wheel will land on next.</p>
+        <div class="how"><strong>How to play:</strong> Spin a wheel with pictures. Whatever it lands on, that student must say the word, spell it, and use it in a sentence.</div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-icon">✏️</div>
+        <div class="game-tag">Writing · Grade 2–5</div>
+        <h3>Draw and write</h3>
+        <p>Students draw something from their own village — a tree, a market stall, a cow — then label it in English.</p>
+        <div class="how"><strong>How to play:</strong> Give students 10 minutes to draw freely. Then they label every element they can name in English using lesson vocabulary.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Empower<span>ED</span></div>
+  <p>Free English education for rural Karnataka · Built in Thirthahalli · Always free</p>
+</footer>
+
+</body>
+</html>

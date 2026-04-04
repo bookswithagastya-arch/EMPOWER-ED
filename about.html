@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — EmpowerED</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .page-hero { background: var(--warm-white); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--border); }
+  .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+  .breadcrumb a { color: var(--teal); text-decoration: none; }
+  .page-hero h1 { font-family: var(--font-display); font-size: 2.5rem; color: var(--brown); letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+  .page-hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 560px; line-height: 1.7; }
+
+  .about-section { background: var(--cream); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.8fr; gap: 4rem; align-items: start; }
+  @media (max-width: 680px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .about-img { background: var(--teal-light); border-radius: 1.25rem; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .about-initials { font-family: var(--font-display); font-size: 5rem; font-weight: 600; color: var(--teal); opacity: 0.2; }
+  .about-tag { position: absolute; bottom: 1.25rem; left: 1.25rem; right: 1.25rem; background: var(--teal); color: #fff; border-radius: 0.5rem; padding: 0.875rem 1rem; }
+  .about-tag .name { font-weight: 600; color: #fff; font-size: 1rem; margin-bottom: 0.2rem; }
+  .about-tag .role { color: rgba(255,255,255,0.7); font-size: 0.82rem; line-height: 1.4; }
+
+  .about-content h2 { font-family: var(--font-display); font-size: 1.75rem; color: var(--brown); margin-bottom: 1.25rem; letter-spacing: -0.02em; line-height: 1.3; }
+  .about-content p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem; }
+  .about-content p strong { color: var(--brown); font-weight: 600; }
+  .about-quote { border-left: 3px solid var(--amber); padding-left: 1.25rem; margin: 1.75rem 0; font-family: var(--font-display); font-style: italic; font-size: 1.1rem; color: var(--brown-mid); line-height: 1.65; }
+
+  .timeline { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border); }
+  .timeline h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--brown); margin-bottom: 2rem; }
+  .timeline-list { display: flex; flex-direction: column; gap: 1.25rem; }
+  .timeline-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+  .timeline-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--teal); flex-shrink: 0; margin-top: 0.35rem; }
+  .timeline-content { flex: 1; }
+  .timeline-year { font-size: 0.8rem; font-weight: 600; color: var(--teal); margin-bottom: 0.2rem; }
+  .timeline-title { font-size: 0.95rem; font-weight: 600; color: var(--brown); margin-bottom: 0.2rem; }
+  .timeline-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
+
+  .mission { background: var(--brown); margin-top: 5rem; }
+  /* Note: mission section uses section padding from shared CSS */
+  .mission h2 { font-family: var(--font-display); font-size: 1.75rem; color: #fff; margin-bottom: 1rem; }
+  .mission p { color: rgba(255,255,255,0.75); font-size: 1.05rem; line-height: 1.75; max-width: 600px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Empower<span>ED</span></a>
+  <ul class="nav-links">
+    <li><a href="curriculum.html">Curriculum</a></li>
+    <li><a href="games.html">How we learn</a></li>
+    <li><a href="materials.html">Free materials</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> → About</div>
+    <h1>Built in Thirthahalli.</h1>
+    <p>EmpowerED started from two years of observation — not a classroom theory. Here's where it came from and where it's going.</p>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+
+      <div>
+        <div class="about-img">
+          <div class="about-initials">A</div>
+          <div class="about-tag">
+            <!-- UPDATE NAME AND ROLE -->
+            <div class="name">Agastya</div>
+            <div class="role">Founder, EmpowerED<br>DPS Bangalore South</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <h2>The problem isn't capability. It's always been the system.</h2>
+
+        <!-- UPDATE YOUR STORY HERE -->
+        <p>I spent two years in Thirthahalli, Shivamogga during COVID — long enough to see what actually happens in rural classrooms. Students weren't struggling because they lacked ability. They were disengaging because <strong>nothing in the curriculum felt like it belonged to their world.</strong></p>
+
+        <p>The textbooks used words from cities. The pictures showed things they'd never seen. The teaching method was rote repetition — write this word twenty times and somehow you'll remember it. It wasn't working, and everyone knew it wasn't working.</p>
+
+        <div class="about-quote">"The problem isn't capability. It's always been the system — and the incentives that shape it."</div>
+
+        <p>EmpowerED started as three sessions with six students in Thirthahalli. I wanted to understand what actually worked — not what the curriculum said should work. What I found was simple: <strong>when the material felt like their world, students engaged.</strong> When it felt foreign, they switched off.</p>
+
+        <p>After a second cohort of twenty students, it was clear that individual tutoring — however well-intentioned — doesn't scale. <strong>The goal became building something any teacher could use</strong> in any rural classroom, without needing me to be there.</p>
+
+        <p>This is still being built. Cohort 3 launches in Thirthahalli this summer. School partnerships are in progress. Everything here is real, tested, and improving.</p>
+
+        <!-- TIMELINE -->
+        <div class="timeline">
+          <h3>How we got here</h3>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">2020–2022</div>
+                <div class="timeline-title">Two years in Thirthahalli</div>
+                <div class="timeline-desc">Lived in Thirthahalli during COVID. Observed first-hand how rural students engaged with English education — and why they often didn't.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">2023</div>
+                <div class="timeline-title">Cohort 1 — 6 students</div>
+                <div class="timeline-desc">First structured teaching sessions in Thirthahalli. Tested what approaches worked and what didn't.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-title">Cohort 2 — 20 students</div>
+                <div class="timeline-desc">Scaled the approach, refined the curriculum, and began documenting outcomes.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">2025</div>
+                <div class="timeline-title">EmpowerED curriculum launched</div>
+                <div class="timeline-desc">First structured curriculum with games, worksheets, Kannada explanations, and lesson plans — built to be used by any teacher.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">Summer 2026</div>
+                <div class="timeline-title">Cohort 3 + school partnerships</div>
+                <div class="timeline-desc">Cohort 3 launching in Thirthahalli. Conversations underway with government and private schools in Karnataka.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mission">
+  <div class="container">
+    <h2>The long-term goal</h2>
+    <p>A free, replicable English curriculum that any rural Karnataka teacher can download and use — without training, without cost, and without needing anyone from outside to come in and run it. EmpowerED belongs to the communities it serves.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Empower<span>ED</span></div>
+  <p>Free English education for rural Karnataka · Built in Thirthahalli · Always free</p>
+</footer>
+
+</body>
+</html>
