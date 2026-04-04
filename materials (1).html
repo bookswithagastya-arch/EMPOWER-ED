@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Materials — EmpowerED</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .page-hero { background: var(--warm-white); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--border); }
+  .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+  .breadcrumb a { color: var(--teal); text-decoration: none; }
+  .page-hero h1 { font-family: var(--font-display); font-size: 2.5rem; color: var(--brown); letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+  .page-hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 560px; line-height: 1.7; }
+
+  .materials-section { background: var(--cream); }
+  .free-banner { background: var(--teal-light); border: 1px solid rgba(26,107,90,0.2); border-radius: 0.875rem; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem; margin-bottom: 3rem; }
+  .free-banner .badge { background: var(--teal); color: #fff; font-size: 0.8rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 2rem; white-space: nowrap; }
+  .free-banner p { font-size: 0.9rem; color: var(--teal); line-height: 1.5; }
+
+  .materials-group { margin-bottom: 3rem; }
+  .group-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.5rem; }
+  .group-title { font-family: var(--font-display); font-size: 1.4rem; color: var(--brown); margin-bottom: 1.25rem; }
+
+  .material-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .material-row { background: var(--warm-white); border: 1px solid var(--border); border-radius: 0.75rem; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem; transition: border-color 0.2s; }
+  .material-row:hover { border-color: var(--teal); }
+  .mat-icon { width: 40px; height: 40px; border-radius: 0.5rem; background: var(--teal-light); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+  .mat-info { flex: 1; }
+  .mat-title { font-weight: 600; font-size: 0.95rem; color: var(--brown); }
+  .mat-sub { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.15rem; }
+  .mat-badge { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 2rem; background: var(--teal-light); color: var(--teal); flex-shrink: 0; }
+  .mat-badge.amber { background: var(--amber-light); color: var(--amber); }
+  /* TO LINK PDF: change href="#" to href="materials/filename.pdf" */
+  .mat-download { background: var(--teal); color: #fff; padding: 0.5rem 1.1rem; border-radius: 0.5rem; font-size: 0.85rem; font-weight: 600; text-decoration: none; flex-shrink: 0; transition: background 0.2s; }
+  .mat-download:hover { background: var(--teal-mid); }
+  .mat-download.disabled { background: var(--brown-light); color: var(--brown-mid); pointer-events: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Empower<span>ED</span></a>
+  <ul class="nav-links">
+    <li><a href="curriculum.html">Curriculum</a></li>
+    <li><a href="games.html">How we learn</a></li>
+    <li><a href="materials.html" class="active">Free materials</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> → Free materials</div>
+    <h1>Everything you need to teach</h1>
+    <p>Every worksheet, game guide, lesson plan, and vocabulary list — completely free. No sign up. No paywall. Download and use in your classroom tomorrow.</p>
+  </div>
+</section>
+
+<section class="materials-section">
+  <div class="container">
+
+    <div class="free-banner">
+      <div class="badge">100% free</div>
+      <p>EmpowerED will never charge for curriculum materials. Every teacher, parent, and student deserves access — always.</p>
+    </div>
+
+    <!-- WORKSHEETS -->
+    <div class="materials-group">
+      <div class="group-label">Worksheets</div>
+      <div class="group-title">Practice materials for students</div>
+      <div class="material-list">
+        <div class="material-row">
+          <div class="mat-icon">📄</div>
+          <div class="mat-info">
+            <div class="mat-title">Lesson 2 — the -at family worksheet</div>
+            <div class="mat-sub">Fill-in-the-blank, picture matching, and sentence building</div>
+          </div>
+          <div class="mat-badge">Worksheet</div>
+          <!-- CHANGE href="#" TO href="materials/lesson-2-worksheet.pdf" WHEN READY -->
+          <a href="#" class="mat-download disabled">Coming soon</a>
+        </div>
+        <div class="material-row">
+          <div class="mat-icon">📄</div>
+          <div class="mat-info">
+            <div class="mat-title">Lesson 3 — the -an and -am family worksheet</div>
+            <div class="mat-sub">Fill-in-the-blank, picture matching, and sentence building</div>
+          </div>
+          <div class="mat-badge">Worksheet</div>
+          <a href="#" class="mat-download disabled">Coming soon</a>
+        </div>
+        <!-- ADD MORE WORKSHEETS HERE — copy a material-row block -->
+      </div>
+    </div>
+
+    <!-- TEACHER GUIDES -->
+    <div class="materials-group">
+      <div class="group-label">Teacher guides</div>
+      <div class="group-title">Lesson plans and game instructions</div>
+      <div class="material-list">
+        <div class="material-row">
+          <div class="mat-icon">📋</div>
+          <div class="mat-info">
+            <div class="mat-title">Lesson 2 — full teacher lesson plan</div>
+            <div class="mat-sub">45-minute plan with timing, materials needed, and Kannada notes</div>
+          </div>
+          <div class="mat-badge amber">Lesson plan</div>
+          <a href="#" class="mat-download disabled">Coming soon</a>
+        </div>
+        <div class="material-row">
+          <div class="mat-icon">📋</div>
+          <div class="mat-info">
+            <div class="mat-title">Word family cricket — teacher guide</div>
+            <div class="mat-sub">Step-by-step instructions for classes of 10–30 students</div>
+          </div>
+          <div class="mat-badge amber">Game guide</div>
+          <a href="#" class="mat-download disabled">Coming soon</a>
+        </div>
+        <!-- ADD MORE GUIDES HERE -->
+      </div>
+    </div>
+
+    <!-- VOCABULARY -->
+    <div class="materials-group">
+      <div class="group-label">Vocabulary</div>
+      <div class="group-title">Word lists and reference materials</div>
+      <div class="material-list">
+        <div class="material-row">
+          <div class="mat-icon">📝</div>
+          <div class="mat-info">
+            <div class="mat-title">Karnataka context word list</div>
+            <div class="mat-sub">English words rooted in rural Karnataka life — for teachers to use in any lesson</div>
+          </div>
+          <div class="mat-badge">Vocabulary</div>
+          <a href="#" class="mat-download disabled">Coming soon</a>
+        </div>
+        <!-- ADD MORE VOCAB MATERIALS HERE -->
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Empower<span>ED</span></div>
+  <p>Free English education for rural Karnataka · Built in Thirthahalli · Always free</p>
+</footer>
+
+</body>
+</html>
