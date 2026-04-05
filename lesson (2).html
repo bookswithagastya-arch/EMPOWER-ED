@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson — EmpowerED</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .page-hero { background: var(--teal); padding: 4rem 2rem 3rem; }
+  .breadcrumb { font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-bottom: 1rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.85); text-decoration: none; }
+  .lesson-tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 0.5rem; }
+  .page-hero h1 { font-family: var(--font-display); font-size: 2.2rem; color: #fff; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+  .page-hero p { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 560px; line-height: 1.7; }
+
+  .lesson-body { background: var(--cream); padding: 3rem 2rem; }
+  .lesson-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  @media (max-width: 680px) { .lesson-grid { grid-template-columns: 1fr; } }
+
+  .lesson-block { margin-bottom: 2.5rem; }
+  .block-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; }
+
+  .video-container { background: var(--brown); border-radius: 1rem; aspect-ratio: 16/9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; }
+  .play-btn { width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.3rem; }
+  .video-container p { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+
+  .word-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .word-chip { background: var(--teal-light); color: var(--teal); padding: 0.4rem 1rem; border-radius: 2rem; font-size: 0.9rem; font-weight: 500; }
+  .word-chip .hl { color: var(--amber); font-weight: 700; }
+
+  .game-box { background: var(--amber-light); border: 1px solid rgba(200,98,10,0.15); border-radius: 0.875rem; padding: 1.5rem; }
+  .game-box .game-name { font-size: 0.8rem; font-weight: 600; color: var(--amber); margin-bottom: 0.5rem; }
+  .game-box h3 { font-size: 1rem; font-weight: 600; color: var(--brown); margin-bottom: 0.5rem; }
+  .game-box p { font-size: 0.9rem; color: var(--brown-mid); line-height: 1.65; }
+
+  .kannada-box { background: var(--brown-light); border-radius: 0.875rem; padding: 1.5rem; }
+  .kannada-box .kn-label { font-size: 0.8rem; font-weight: 600; color: var(--brown-mid); margin-bottom: 0.75rem; }
+  .kannada-box .kn-text { font-size: 1rem; color: var(--brown); line-height: 1.7; margin-bottom: 0.5rem; }
+  .kannada-box .en-text { font-size: 0.85rem; color: var(--brown-mid); font-style: italic; line-height: 1.6; }
+
+  .worksheet-box { background: var(--warm-white); border: 1px solid var(--border); border-radius: 0.875rem; padding: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+  .ws-icon { width: 48px; height: 48px; background: var(--teal-light); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+  .ws-info h3 { font-size: 0.95rem; font-weight: 600; color: var(--brown); margin-bottom: 0.25rem; }
+  .ws-info p { font-size: 0.82rem; color: var(--text-muted); }
+  .ws-download { margin-left: auto; background: var(--teal); color: #fff; padding: 0.6rem 1.25rem; border-radius: 0.5rem; font-size: 0.85rem; font-weight: 600; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+  .ws-download.disabled { background: var(--brown-light); color: var(--brown-mid); pointer-events: none; }
+
+  .coming-banner { background: var(--brown-light); border-radius: 1rem; padding: 3rem 2rem; text-align: center; }
+  .coming-banner h2 { font-family: var(--font-display); font-size: 1.5rem; color: var(--brown); margin-bottom: 0.75rem; }
+  .coming-banner p { color: var(--text-muted); font-size: 0.95rem; }
+
+  .lesson-nav { display: flex; justify-content: space-between; padding: 2rem; border-top: 1px solid var(--border); background: var(--warm-white); }
+  .lesson-nav a { font-size: 0.9rem; font-weight: 600; color: var(--teal); text-decoration: none; }
+  .lesson-nav a:hover { text-decoration: underline; }
+  .lesson-nav span { font-size: 0.9rem; color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Empower<span>ED</span></a>
+  <ul class="nav-links">
+    <li><a href="curriculum.html" class="active">Curriculum</a></li>
+    <li><a href="games.html">How we learn</a></li>
+    <li><a href="materials.html">Free materials</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> → <a href="curriculum.html">Curriculum</a> → <span id="breadcrumb-lesson">Lesson</span></div>
+    <div class="lesson-tag" id="lesson-tag"></div>
+    <h1 id="lesson-title"></h1>
+    <p id="lesson-desc"></p>
+  </div>
+</section>
+
+<section class="lesson-body">
+  <div class="container" id="lesson-content"></div>
+</section>
+
+<div class="lesson-nav" id="lesson-nav"></div>
+
+<footer>
+  <div class="footer-logo">Empower<span>ED</span></div>
+  <p>Free English education for rural Karnataka · Built in Thirthahalli · Always free</p>
+</footer>
+
+<script>
+const lessons = {
+  1: {
+    title: "Revision of capital and small letters",
+    tag: "Lesson 1 · Unit 1 · Reading · Grade 1–3",
+    desc: "Recognising and writing all 26 letters — using Karnataka words and objects as examples throughout.",
+    words: [["A","apple"],["B","bat"],["C","cat"],["D","dam"],["M","mango"],["R","rain"],["T","tap"],["V","van"]],
+    game: { name: "True or false race", how: "Teacher holds up a letter card. Students run to the left side if it's a capital, right side if it's small. Fast, physical, and impossible to disengage from." },
+    kannada: { kn: "ಈ ಪಾಠದಲ್ಲಿ ನಾವು A ರಿಂದ Z ವರೆಗೆ ಎಲ್ಲಾ ಅಕ್ಷರಗಳನ್ನು ಕಲಿಯುತ್ತೇವೆ. ದೊಡ್ಡ ಅಕ್ಷರ ಮತ್ತು ಚಿಕ್ಕ ಅಕ್ಷರ — ಎರಡೂ ಮುಖ್ಯ!", en: "In this lesson we learn all letters from A to Z — capital letters and small letters. Both are important!" },
+    pdf: null,
+    available: true
+  },
+  2: {
+    title: "'a' family words — -at and -an",
+    tag: "Lesson 2 · Unit 1 · Reading · Grade 1–3",
+    desc: "The -at and -an word families — introduced through cricket and everyday Karnataka objects.",
+    words: [["c","at"],["b","at"],["m","at"],["r","at"],["c","an"],["f","an"],["m","an"],["v","an"]],
+    game: { name: "Word family cricket", how: "Teacher is the bowler. Students take turns batting — name a word from the -at or -an family to score a run. Three misses and you're out. Whole class keeps score." },
+    kannada: { kn: "ಈ ಪಾಠದಲ್ಲಿ ನಾವು '-at' ಮತ್ತು '-an' ಕುಟುಂಬದ ಪದಗಳನ್ನು ಕಲಿಯುತ್ತೇವೆ. bat ಎಂದರೆ ಕ್ರಿಕೆಟ್ ಬ್ಯಾಟ್, fan ಎಂದರೆ ಫ್ಯಾನ್ — ನಿಮಗೆ ಗೊತ್ತಿರುವ ವಿಷಯ!", en: "In this lesson we learn -at and -an family words. bat means cricket bat, fan means fan — things you already know!" },
+    pdf: "empowered_at_family.pdf",
+    available: true
+  },
+  3: {
+    title: "'a' family words — -ab, -am, -ap, -ad",
+    tag: "Lesson 3 · Unit 1 · Reading · Grade 1–3",
+    desc: "Four more 'a' family endings — cab, jam, cap, dad and more, using familiar Karnataka context.",
+    words: [["c","ab"],["d","ab"],["t","ab"],["j","am"],["d","am"],["c","ap"],["n","ap"],["d","ad"],["s","ad"]],
+    game: { name: "Market game", how: "Set up pretend market stalls labelled with words — cab stand, jam stall, cap shop. Students 'buy' items by reading the word correctly before they can have it." },
+    kannada: { kn: "ಈ ಪಾಠದಲ್ಲಿ ನಾವು '-ab', '-am', '-ap', '-ad' ಕುಟುಂಬದ ಪದಗಳನ್ನು ಕಲಿಯುತ್ತೇವೆ. cab ಎಂದರೆ ಟ್ಯಾಕ್ಸಿ, jam ಎಂದರೆ ಜ್ಯಾಮ್!", en: "In this lesson we learn -ab, -am, -ap, -ad family words. cab means taxi, jam means jam!" },
+    pdf: "empowered_ab_am_ap_ad.pdf",
+    available: true
+  },
+  4: {
+    title: "Sight words — 'I' and 'my'",
+    tag: "Lesson 4 · Unit 1 · Sight words · Grade 1–3",
+    desc: "First personal pronouns — I am, my bat, my cat. Building the foundation for simple sentences.",
+    words: [["I",""],["my",""]],
+    game: { name: "Spin the word", how: "Spin a wheel with pictures. Land on a picture, make a sentence using 'I' or 'my'. I see a cat. My bat is big. Competitive energy keeps everyone alert." },
+    kannada: { kn: "ಈ ಪಾಠದಲ್ಲಿ ನಾವು 'I' ಮತ್ತು 'my' ಕಲಿಯುತ್ತೇವೆ. 'I' ಎಂದರೆ ನಾನು. 'my' ಎಂದರೆ ನನ್ನ. My bat — ನನ್ನ ಬ್ಯಾಟ್!", en: "In this lesson we learn 'I' and 'my'. I means me. my means belonging to me. My bat — my cricket bat!" },
+    pdf: null,
+    available: true
+  },
+  5: {
+    title: "Sight word — 'it'",
+    tag: "Lesson 5 · Unit 1 · Sight words · Grade 1–3",
+    desc: "It is a cat. It is my bat. Building first complete simple sentences using 'it'.",
+    words: [["it",""]],
+    game: { name: "True or false race", how: "Teacher holds up a picture and says a sentence — 'It is a cat.' Students run to true or false side. Wrong answer, sit down. Last one standing wins." },
+    kannada: { kn: "ಈ ಪಾಠದಲ್ಲಿ ನಾವು 'it' ಕಲಿಯುತ್ತೇವೆ. It is a cat — ಅದು ಒಂದು ಬೆಕ್ಕು. It is my bat — ಅದು ನನ್ನ ಬ್ಯಾಟ್!", en: "In this lesson we learn 'it'. It is a cat — that is a cat. It is my bat — that is my bat!" },
+    pdf: null,
+    available: true
+  },
+  6: {
+    title: "Sight word — 'a'",
+    tag: "Lesson 6 · Unit 1 · Sight words · Grade 1–3",
+    desc: "A cat. A fan. A man. Using the article naturally in speech and writing.",
+    words: [["a",""]],
+    game: { name: "Draw and write", how: "Students draw something from their village — a tree, a market stall, a cow — and label it: a tree, a cow, a fan. Their world, their words." },
+    kannada: { kn: "ಈ ಪಾಠದಲ್ಲಿ ನಾವು 'a' ಕಲಿಯುತ್ತೇವೆ. 'a' ಎಂದರೆ ಒಂದು. a cat — ಒಂದು ಬೆಕ್ಕು. a fan — ಒಂದು ಫ್ಯಾನ್!", en: "In this lesson we learn 'a'. a means one. a cat — one cat. a fan — one fan!" },
+    pdf: null,
+    available: true
+  }
+};
+
+const comingSoon = [7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
+
+function getParam(name) {
+  const url = new URL(window.location.href);
+  return parseInt(url.searchParams.get(name)) || 2;
+}
+
+const id = getParam('id');
+const lesson = lessons[id];
+
+if (lesson) {
+  document.title = lesson.title + ' — EmpowerED';
+  document.getElementById('breadcrumb-lesson').textContent = 'Lesson ' + id;
+  document.getElementById('lesson-tag').textContent = lesson.tag;
+  document.getElementById('lesson-title').textContent = lesson.title;
+  document.getElementById('lesson-desc').textContent = lesson.desc;
+
+  // Word chips
+  const chips = lesson.words.map(([hl, rest]) =>
+    rest
+      ? `<div class="word-chip"><span class="hl">${hl}</span>${rest}</div>`
+      : `<div class="word-chip" style="background:var(--amber-light);color:var(--amber);font-weight:700;">${hl}</div>`
+  ).join('');
+
+  // PDF link
+  const pdfBtn = lesson.pdf
+    ? `<a href="${lesson.pdf}" target="_blank" class="ws-download">Open PDF</a>`
+    : `<span class="ws-download disabled">Coming soon</span>`;
+
+  document.getElementById('lesson-content').innerHTML = `
+    <div class="lesson-grid">
+      <div>
+        <div class="lesson-block">
+          <div class="block-label">Lesson video</div>
+          <div class="video-container">
+            <div class="play-btn">▶</div>
+            <p>Video coming soon</p>
+          </div>
+        </div>
+        <div class="lesson-block">
+          <div class="block-label">Explanation in Kannada</div>
+          <div class="kannada-box">
+            <div class="kn-label">Bridge for comprehension</div>
+            <div class="kn-text">${lesson.kannada.kn}</div>
+            <div class="en-text">"${lesson.kannada.en}"</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="lesson-block">
+          <div class="block-label">Word family</div>
+          <div class="word-chips">${chips}</div>
+        </div>
+        <div class="lesson-block">
+          <div class="block-label">Game activity</div>
+          <div class="game-box">
+            <div class="game-name">${lesson.game.name}</div>
+            <h3>How to play</h3>
+            <p>${lesson.game.how}</p>
+          </div>
+        </div>
+        <div class="lesson-block">
+          <div class="block-label">Worksheet</div>
+          <div class="worksheet-box">
+            <div class="ws-icon">📄</div>
+            <div class="ws-info">
+              <h3>Lesson ${id} worksheet</h3>
+              <p>Word building, picture match, sentence practice</p>
+            </div>
+            ${pdfBtn}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Nav
+  const prev = id > 1 ? `<a href="lesson.html?id=${id-1}">← Lesson ${id-1}</a>` : `<span></span>`;
+  const next = id < 21 ? `<a href="lesson.html?id=${id+1}">Lesson ${id+1} →</a>` : `<span></span>`;
+  document.getElementById('lesson-nav').innerHTML = prev + next;
+
+} else if (comingSoon.includes(id)) {
+  document.title = 'Coming Soon — EmpowerED';
+  document.getElementById('breadcrumb-lesson').textContent = 'Lesson ' + id;
+  document.getElementById('lesson-tag').textContent = 'Lesson ' + id + ' · Coming soon';
+  document.getElementById('lesson-title').textContent = 'This lesson is coming soon';
+  document.getElementById('lesson-desc').textContent = 'We are building this lesson now. Check back soon.';
+  document.getElementById('lesson-content').innerHTML = `
+    <div class="coming-banner">
+      <h2>Coming soon</h2>
+      <p>This lesson is currently being built. In the meantime, explore the lessons that are already available.</p>
+      <a href="curriculum.html" style="display:inline-block;margin-top:1.5rem;background:var(--teal);color:#fff;padding:0.75rem 2rem;border-radius:0.5rem;text-decoration:none;font-weight:600;">Back to curriculum</a>
+    </div>
+  `;
+  document.getElementById('lesson-nav').innerHTML = `<a href="lesson.html?id=${id-1}">← Lesson ${id-1}</a><a href="curriculum.html">All lessons →</a>`;
+}
+</script>
+
+</body>
+</html>
