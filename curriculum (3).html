@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curriculum — EmpowerED</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .page-hero { background: var(--warm-white); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--border); }
+  .page-hero .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+  .page-hero .breadcrumb a { color: var(--teal); text-decoration: none; }
+  .page-hero h1 { font-family: var(--font-display); font-size: 2.5rem; color: var(--brown); letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+  .page-hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 560px; line-height: 1.7; }
+
+  .curriculum-section { background: var(--cream); padding: 3rem 2rem; }
+
+  .part-heading {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--brown);
+    margin-bottom: 0.4rem;
+    margin-top: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--teal-light);
+  }
+  .part-sub {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+  }
+
+  .unit-block { margin-bottom: 3rem; }
+  .unit-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.5rem; }
+  .unit-title { font-family: var(--font-display); font-size: 1.4rem; color: var(--brown); margin-bottom: 1.25rem; }
+  .lessons-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .lesson-row {
+    display: flex; align-items: center; gap: 1rem;
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .lesson-row:hover { border-color: var(--teal); box-shadow: 0 2px 12px rgba(26,107,90,0.08); }
+  .lesson-row.coming { opacity: 0.55; pointer-events: none; }
+
+  .lesson-num {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--teal-light); color: var(--teal);
+    font-size: 0.85rem; font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .lesson-num.amber { background: var(--amber-light); color: var(--amber); }
+  .lesson-num.gray { background: var(--brown-light); color: var(--brown-mid); }
+
+  .lesson-info { flex: 1; }
+  .lesson-title { font-weight: 600; font-size: 0.95rem; color: var(--brown); }
+  .lesson-sub { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+  .lesson-badge {
+    font-size: 0.75rem; font-weight: 600;
+    padding: 0.25rem 0.75rem; border-radius: 2rem;
+    background: var(--teal-light); color: var(--teal);
+    flex-shrink: 0;
+  }
+  .lesson-badge.amber { background: var(--amber-light); color: var(--amber); }
+  .lesson-badge.gray { background: var(--brown-light); color: var(--brown-mid); }
+  .lesson-arrow { color: var(--teal); font-size: 1rem; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Empower<span>ED</span></a>
+  <ul class="nav-links">
+    <li><a href="curriculum.html" class="active">Curriculum</a></li>
+    <li><a href="games.html">How we learn</a></li>
+    <li><a href="materials.html">Free materials</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> → Curriculum</div>
+    <h1>Full curriculum</h1>
+    <p>A structured progression from letters to full sentences — taught through games, Kannada explanations, and examples from Karnataka life. Every lesson is free.</p>
+  </div>
+</section>
+
+<section class="curriculum-section">
+  <div class="container">
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- PART 1 -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="part-heading">Part 1 — Beginner</div>
+    <div class="part-sub">Short vowel word families, sight words, and simple sentences. Designed for Grade 1–3 students with little or no prior English.</div>
+
+    <!-- UNIT 1 — 'a' family -->
+    <div class="unit-block">
+      <div class="unit-label">Unit 1</div>
+      <div class="unit-title">'a' family words</div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=1" class="lesson-row">
+          <div class="lesson-num">1</div>
+          <div class="lesson-info">
+            <div class="lesson-title">'at' family words</div>
+            <div class="lesson-sub">bat, cat, hat, mat, rat, pat, sat, fat — word building, read aloud, picture match</div>
+          </div>
+          <div class="lesson-badge">Reading</div>
+          <div class="lesson-arrow">→</div>
+        </a>
+
+        <a href="lesson.html?id=2" class="lesson-row">
+          <div class="lesson-num">2</div>
+          <div class="lesson-info">
+            <div class="lesson-title">'an' family words</div>
+            <div class="lesson-sub">can, fan, man, pan, ran, van — word building, read aloud, growing sentences</div>
+          </div>
+          <div class="lesson-badge">Reading</div>
+          <div class="lesson-arrow">→</div>
+        </a>
+
+        <a href="lesson.html?id=3" class="lesson-row">
+          <div class="lesson-num">3</div>
+          <div class="lesson-info">
+            <div class="lesson-title">'ab', 'am', 'ap', 'ad' family words</div>
+            <div class="lesson-sub">cab, dab, dam, jam, cap, lap, map, dad, lad, pad — four families in one lesson</div>
+          </div>
+          <div class="lesson-badge">Reading</div>
+          <div class="lesson-arrow">→</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- UNIT 2 — 'o' family -->
+    <div class="unit-block">
+      <div class="unit-label">Unit 2</div>
+      <div class="unit-title">'o' family words</div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=4" class="lesson-row">
+          <div class="lesson-num">4</div>
+          <div class="lesson-info">
+            <div class="lesson-title">'ot', 'og', 'oy' family words</div>
+            <div class="lesson-sub">cot, dot, hot, pot, dog, fog, jog, log, boy, toy — word building, fill in the missing letter, match</div>
+          </div>
+          <div class="lesson-badge">Reading</div>
+          <div class="lesson-arrow">→</div>
+        </a>
+
+        <a href="lesson.html?id=5" class="lesson-row">
+          <div class="lesson-num">5</div>
+          <div class="lesson-info">
+            <div class="lesson-title">'ox', 'od', 'op' family words</div>
+            <div class="lesson-sub">ox, box, fox, pod, rod, nod, cop, hop, mop, pop, top — word building, read aloud, match</div>
+          </div>
+          <div class="lesson-badge">Reading</div>
+          <div class="lesson-arrow">→</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- UNIT 3 — 'i' family -->
+    <div class="unit-block">
+      <div class="unit-label">Unit 3</div>
+      <div class="unit-title">'i' family words</div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=6" class="lesson-row">
+          <div class="lesson-num">6</div>
+          <div class="lesson-info">
+            <div class="lesson-title">'ib', 'ig', 'in', 'id', 'ip', 'it' family words</div>
+            <div class="lesson-sub">bib, nib, rib, big, dig, fig, wig, pig, bin, fin, pin, tin, win, did, hid, kid, lid, hip, lip, zip, dip, sip, tip, fit, kit, pit — one family per page</div>
+          </div>
+          <div class="lesson-badge">Reading</div>
+          <div class="lesson-arrow">→</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- UNIT 4 — Sight words -->
+    <div class="unit-block">
+      <div class="unit-label">Unit 4</div>
+      <div class="unit-title">Sight words</div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=7" class="lesson-row">
+          <div class="lesson-num amber">7</div>
+          <div class="lesson-info">
+            <div class="lesson-title">Sight words — all 13 words</div>
+            <div class="lesson-sub">I, my, it, is, the, in, on, and, his, her, has, he, she — with Kannada translations and picture context</div>
+          </div>
+          <div class="lesson-badge amber">Sight words</div>
+          <div class="lesson-arrow">→</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- UNIT 5 — 'u' and 'e' family -->
+    <div class="unit-block">
+      <div class="unit-label">Unit 5</div>
+      <div class="unit-title">'u' and 'e' family words</div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=8" class="lesson-row coming">
+          <div class="lesson-num gray">8</div>
+          <div class="lesson-info">
+            <div class="lesson-title">'u' family words</div>
+            <div class="lesson-sub">sun, cup, bug, cut, run, bun, fun, gut, nut, hug — un, up, ug, ut families</div>
+          </div>
+          <div class="lesson-badge gray">Coming soon</div>
+        </a>
+
+        <a href="lesson.html?id=9" class="lesson-row coming">
+          <div class="lesson-num gray">9</div>
+          <div class="lesson-info">
+            <div class="lesson-title">'e' family words</div>
+            <div class="lesson-sub">hen, pet, leg, red, bed, ten, wet, peg, led — en, et, eg, ed families</div>
+          </div>
+          <div class="lesson-badge gray">Coming soon</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- UNIT 6 — Review -->
+    <div class="unit-block">
+      <div class="unit-label">Unit 6</div>
+      <div class="unit-title">Review and mixed activities</div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=10" class="lesson-row coming">
+          <div class="lesson-num gray">10</div>
+          <div class="lesson-info">
+            <div class="lesson-title">At a glance — full word list</div>
+            <div class="lesson-sub">All word families together — rapid reading practice and word cricket tournament</div>
+          </div>
+          <div class="lesson-badge gray">Coming soon</div>
+        </a>
+
+        <a href="lesson.html?id=11" class="lesson-row coming">
+          <div class="lesson-num gray">11</div>
+          <div class="lesson-info">
+            <div class="lesson-title">Mixed bag of activities</div>
+            <div class="lesson-sub">Story relay, draw and write, spin the word — putting it all together</div>
+          </div>
+          <div class="lesson-badge gray">Coming soon</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- PART 2 -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="part-heading" style="margin-top: 3rem;">Part 2 — Intermediate</div>
+    <div class="part-sub">Long vowels, magic e, and more complex words. For students who have completed Part 1 or already have basic phonics.</div>
+
+    <!-- UNIT 7 — Long oo / Short oo -->
+    <div class="unit-block">
+      <div class="unit-label">Unit 7</div>
+      <div class="unit-title">Long 'oo' and short 'oo' sounds</div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=12" class="lesson-row coming">
+          <div class="lesson-num gray">12</div>
+          <div class="lesson-info">
+            <div class="lesson-title">Long 'oo' words</div>
+            <div class="lesson-sub">moon, spoon, food, cool, pool, roof, boot, tooth — the long oo sound in context</div>
+          </div>
+          <div class="lesson-badge gray">Coming soon</div>
+        </a>
+
+        <a href="lesson.html?id=13" class="lesson-row coming">
+          <div class="lesson-num gray">13</div>
+          <div class="lesson-info">
+            <div class="lesson-title">Short 'oo' words</div>
+            <div class="lesson-sub">book, cook, look, good, wood, foot, hood — the short oo sound in context</div>
+          </div>
+          <div class="lesson-badge gray">Coming soon</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- UNIT 8 — Magic e -->
+    <div class="unit-block">
+      <div class="unit-label">Unit 8</div>
+      <div class="unit-title">Magic 'e' words</div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=14" class="lesson-row coming">
+          <div class="lesson-num gray">14</div>
+          <div class="lesson-info">
+            <div class="lesson-title">Magic 'e' — a_e words</div>
+            <div class="lesson-sub">cake, lake, name, game, came, make — how the silent e changes the vowel sound</div>
+          </div>
+          <div class="lesson-badge gray">Coming soon</div>
+        </a>
+
+        <a href="lesson.html?id=15" class="lesson-row coming">
+          <div class="lesson-num gray">15</div>
+          <div class="lesson-info">
+            <div class="lesson-title">Magic 'e' — i_e and o_e words</div>
+            <div class="lesson-sub">bike, kite, like, time, home, hope, note, hole — long i and long o with silent e</div>
+          </div>
+          <div class="lesson-badge gray">Coming soon</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- UNIT 9 — this that -->
+    <div class="unit-block">
+      <div class="unit-label">Unit 9</div>
+      <div class="unit-title">Demonstratives — 'this' and 'that'</div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=16" class="lesson-row coming">
+          <div class="lesson-num gray">16</div>
+          <div class="lesson-info">
+            <div class="lesson-title">Sight words — 'this' and 'that'</div>
+            <div class="lesson-sub">This is my bag. That is her cat. Using demonstratives to point and describe</div>
+          </div>
+          <div class="lesson-badge amber">Sight words</div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Empower<span>ED</span></div>
+  <p>Free English education for rural Karnataka · Built in Thirthahalli · Always free</p>
+</footer>
+
+</body>
+</html>
